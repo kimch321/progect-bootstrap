@@ -4,29 +4,124 @@
     <meta charset="UTF-8">
     <title>temple</title>
   <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="https://kit.fontawesome.com/a33a90fa65.css" crossorigin="anonymous">
   <!-- https://www.flaticon.com/free-icon/user_456283?term=user&page=1&position=14&origin=search&related_id=456283 -->
+  <!-- 이미지를 직접 삽입하면 빌드시 어려움이 생길 가능성이 있다. -->
+  <!-- 폰트 어썸을 썻는데 무료아이콘이 부족하다. -->
   <!-- https://getbootstrap.kr/ -->
-</head>
+  <script src="https://kit.fontawesome.com/a33a90fa65.js" crossorigin="anonymous"></script>
 <style>
-  h2 {
-    display: inline-block;
+
+  /*nav*/
+  #navRow {
+    padding: 4px 0 4px 0;
+  }
+
+  /*main*/
+
+  #maxMapContainer {
+    background: #FCF5EB;
+  }
+
+  /*아이콘*/
+  i {
+    font-size: 32px;
   }
 </style>
 <body>
 <header></header>
 <nav>
   <div id="navWrapper">
-    <div class="container-xxl" id="pageContainer">
-      <div class="row" id="navRow">
-        <div class="col" id="logo"><h2>Temfo,</h2></div> <!--logo 끝 -->
-        <div class="col" id="selector"><img src="icon/mappin1.png" height="32" width="32"/><img
-                src="icon/calendar1.png" height="32" width="32"/></div> <!--selecter 끝 -->
-        <div class="col" id="loginMenu"><img src="icon/user1.png" height="32" width="32"/></div> <!--loginMenu 끝 -->
+    <div class="container-xxl px-2 border-bottom" id="pageContainer">
+      <div class="row align-middle" id="navRow">
+        <div class="col" id="logo">
+          <h2>Temfo,</h2>
+        </div> <!--logo 끝 -->
+        <div class="col" id="selector">
+          <div class="d-flex justify-content-center">
+            <i class="fa-solid fa-location-dot"></i>
+            <h2 class="d-inline">지역</h2>
+            <i class="fa-regular fa-calendar"></i>
+            <h2 class="d-inline">일정</h2>
+          </div>
+        </div> <!--selecter 끝 -->
+        <div class="col" id="loginMenu">
+          <div class="d-flex flex-row-reverse" id="userWrapper">
+            <i class="fa-regular fa-user"></i>
+          </div>
+        </div> <!--loginMenu 끝 -->
       </div><!-- navRow 끝 -->
     </div> <!-- pageContainer 끝 -->
   </div> <!-- navWrapper 끝 -->
-</nav>
-<main></main>
-<footer></footer>
+</nav> <!-- nav 끝 -->
+<main>
+  <div id="mainContainer"> <!-- mainContainer 끝 -->
+    <div class ="container-xxl px-2" id="maxBicPicContainer">
+      <div id="bigPicture">
+        <img src="img/templepic1.png" class="img-fluid my-4"  alt="templePic" width="1920px" height="840px">
+      </div> <!-- bigPicture 끝 -->
+    </div> <!-- maxBicPicContainer 끝 -->
+    <div class ="container-xxl px-2" id="contentContainer">
+      <div id="contents">
+        <h1 class="my-5">소중한 나, 연꽃 미소</h1>
+        <p class="my-5 h5">파도소리 풍경소리로 내 마음을 찾아 주는 곳.신흥사는 완도의 전망을 한눈에
+          바라볼 수 있는 좋은 위치인 남망산 중턱에 자리하고 있습니다.완도 전망과 함께하는
+          야경은 더욱 아름다운 모습을 보여 주는 곳이기도 합니다.맑은 날이면 신지나
+          대둔산 경치도 볼 수 있고, 완도읍에서 차를 이용하지 않아도 닿을 수 있는 지리적
+          위치로서(완도군청에서 800m) 신흥사는 우리나라에서 몇 안 될 정도로 손꼽히는
+          도심과 바다를 한눈에 볼 수 있는 곳이기도 합니다.신흥사의 창건 역사는 100년이
+          되지 않지만 그 원류는 신라 장보고 시대까지 거슬러 올라갑니다. 독실한 불자였던
+          장보고대사는 청해진에 머물 당시 법화사를 창건하고 완도 지역을 불교의 중심으로
+          우뚝 세우며 불교문화를 꽃피웠습니다. 이때의 영향으로 지금 완도의 대부분이 중도리,
+          정도리, 불목리 등 불교</p>
+      </div> <!-- contents 끝 -->
+    </div> <!-- contentContainer 끝 -->
+    <div class="py-5" id="maxMapContainer">
+      <div class="container-xxl px-2" id="mapContainer">
+        <div class="row">
+          <div class="col-4"id="text">
+            <p>오시는 길</p>
+            <p>충청북도 단양군 영춘면 구인사길 73</p>
+          </div>
+          <div class="col-8" id="map">
+            <img src="img/map1.png" class="img-fluid" height="560" width="855"/>
+          </div>
+        </div>
+      </div>
+    </div> <!-- maxMapContainer 끝 -->
+    <div class="container-xxl px-2" id="anotherProContainer">
+      <div class="my-5" id="contentsContainer">
+        <p class="h2">프로그램</p>
+        <div class="row mt-4" id="proDataContainer">
+          <div class="col-4" class="my-4">
+            <img src="img/propgramThum1.png" class="img-thumbnail" height="278" width="416"/>
+            <p class="m-0 text-center mt-3">체험형</p>
+            <p class="m-0 text-center">더보기</p>
+          </div>
+          <div class="col-4" class="my-4">
+            <img src="img/propgramThum1.png" class="img-thumbnail" height="278" width="416"/>
+            <p class="m-0 text-center mt-3">체험형</p>
+            <p class="m-0 text-center">더보기</p>
+          </div>
+          <div class="col-4" class="my-4">
+            <img src="img/propgramThum1.png" class="img-thumbnail" height="278" width="416"/>
+            <p class="m-0 text-center mt-3">체험형</p>
+            <p class="m-0 text-center">더보기</p>
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- anotherProContainer 끝 -->
+  </div>
+</main> <!-- main 끝 -->
+<footer>
+  <div class="container-xxl px-2 border-top" id="footerContainer">
+    <div class="row p-5">
+      <div class="col-2"><p class="h3">Footer</p></div>
+      <div class="col-5">All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.</div>
+      <div class="col-5"></div>
+    </div>
+  </div>
+</footer> <!-- footer 끝 -->
 </body>
 </html>
